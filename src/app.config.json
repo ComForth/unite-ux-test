@@ -1,0 +1,18 @@
+{
+    "backendUrl": "http://localhost:8090",
+    "messagesSocket": "ws://localhost:8090/messages/listen",
+    "opcWebsocket": "ws://localhost:1880/ws/messages",
+    "domainAuth": false,
+    "authDatabase": "waut",
+    "productionDatabase": "cdb",
+    "histServer": {
+        "server": "WIN-F45TMT7062T",
+        "certificateValidationMode": "None",
+        "username": null,
+        "pwd": null,
+        "pageSize": 0
+    },
+    "pageTitle": "Coloplast - MeS (DEV)",
+    "helpURL":"https://localhost:8443/MeSVideos/files/MES_Engineer.mp4",
+    "NoURL":"https://colomes:8443/MeSVideos/files/NoURL.png"
+}

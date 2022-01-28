@@ -1,0 +1,7 @@
+{
+    "backendUrl": "/api",
+    "messagesSocket": "ws://localhost:8090/messages/listen",
+    "domainAuth": true,
+    "authDatabase": "waut",
+    "productionDatabase": "cdb"
+}

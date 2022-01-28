@@ -1,0 +1,5 @@
+/dist
+node_modules
+*.zip
+WebApiWindowsAuth/Web.config
+frontend/src/mam\main/app.config.js

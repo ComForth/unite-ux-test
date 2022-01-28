@@ -1,0 +1,277 @@
+@include exports("pivotgrid/theme") {
+
+    .k-pivotgrid {
+        @include fill (
+            $pivotgrid-text,
+            $pivotgrid-bg,
+            $pivotgrid-border
+        );
+    }
+
+    .k-pivotgrid-column-headers,
+    .k-pivotgrid-row-headers,
+    .k-pivotgrid-empty-cell {
+        @include fill (
+            $pivotgrid-headers-text,
+            $pivotgrid-headers-bg,
+            $pivotgrid-headers-border
+        );
+    }
+
+    .k-pivotgrid-empty-cell {
+        @include fill (
+            $border: $pivotgrid-alt-border
+        );
+    }
+
+    .k-pivotgrid-row-headers .k-pivotgrid-row .k-pivotgrid-cell:last-child {
+        border-right-color: $pivotgrid-alt-border;
+    }
+
+    .k-pivotgrid-column-headers .k-pivotgrid-column-total:nth-last-of-type(2) .k-pivotgrid-cell:not(.k-pivotgrid-expanded),
+    .k-pivotgrid-column-headers .k-pivotgrid-row:last-child {
+        border-bottom-color: $pivotgrid-alt-border;
+    }
+
+
+    .k-pivotgrid-header-total,
+    .k-pivotgrid-total {
+        @include fill (
+            $pivotgrid-total-text,
+            $pivotgrid-total-bg,
+            $pivotgrid-total-border
+        );
+    }
+
+
+    // Hover state
+    .k-pivotgrid-row-headers tbody > .k-pivotgrid-row.k-state-hover,
+    .k-pivotgrid-row-headers tbody > .k-pivotgrid-row:hover,
+    .k-pivotgrid-column-headers tbody > .k-pivotgrid-row.k-state-hover,
+    .k-pivotgrid-column-headers tbody > .k-pivotgrid-row:hover,
+    .k-pivotgrid-values tbody > .k-pivotgrid-row.k-state-hover,
+    .k-pivotgrid-values tbody > .k-pivotgrid-row:hover {
+        @include fill (
+            $pivotgrid-hover-text,
+            $pivotgrid-hover-bg,
+            $pivotgrid-hover-border
+        );
+    }
+
+    // Focus state
+    .k-pivotgrid-cell.k-state-focus,
+    .k-pivotgrid-cell:focus,
+    .k-master-row > .k-pivotgrid-cell:focus,
+    .k-grouping-row > .k-pivotgrid-cell:focus,
+    .k-detail-row > .k-pivotgrid-cell:focus,
+    .k-group-footer > .k-pivotgrid-cell:focus {
+        @include box-shadow($pivotgrid-focus-shadow);
+    }
+
+    // Selected state
+    .k-pivotgrid-cell.k-state-selected,
+    .k-pivotgrid-row.k-state-selected > .k-pivotgrid-cell {
+        @include fill (
+            $pivotgrid-selected-text,
+            $pivotgrid-selected-bg,
+            $pivotgrid-selected-border
+        );
+    }
+
+}
+
+
+
+@include exports("pivotgrid/theme/configurator") {
+
+    .k-pivotgrid-configurator-button,
+    .k-pivotgrid-configurator-panel {
+        @include fill (
+            $pivotgrid-configurator-text,
+            $pivotgrid-configurator-bg,
+            $pivotgrid-configurator-border
+        );
+    }
+
+    .k-pivotgrid-configurator-header {
+        @include fill(
+            $pivotgrid-configurator-header-text,
+            $pivotgrid-configurator-header-bg,
+            $pivotgrid-configurator-header-border
+        );
+    }
+
+    .k-pivotgrid-configurator-content .k-fields-list-wrapper {
+        @include fill(
+            $border: $pivotgrid-configurator-border
+        );
+    }
+
+
+    // Calculated field
+    .k-calculated-field {
+        @include fill (
+            $pivotgrid-calculated-field-text,
+            $pivotgrid-calculated-field-bg,
+            $pivotgrid-calculated-field-border
+        );
+    }
+
+    .k-calculated-field-header {
+        @include fill(
+            $pivotgrid-calculated-field-header-text,
+            $pivotgrid-calculated-field-header-bg,
+            $pivotgrid-calculated-field-header-border
+        );
+    }
+
+    .k-filter-menu .k-calculated-item {
+        @include fill( $border: $popup-border );
+    }
+
+    .k-pivotgrid-configurator-content .k-form-field-wrapper {
+        @include fill( $border: $component-border );
+    }
+
+
+    // Overlay mode
+    .k-pivotgrid-configurator-overlay {
+        .k-flex-row & {
+            @include box-shadow( $pivotgrid-configurator-end-shadow );
+        }
+
+        .k-flex-row-reverse & {
+            @include box-shadow( $pivotgrid-configurator-start-shadow );
+        }
+
+        .k-flex-col & {
+            @include box-shadow( $pivotgrid-configurator-top-shadow );
+        }
+
+        .k-flex-col-reverse & {
+            @include box-shadow( $pivotgrid-configurator-bottom-shadow );
+        }
+    }
+}
+
+
+
+@include exports("pivotgrid/theme/legacy") {
+
+    .k-pivot {
+        border-color: $pivotgrid-border;
+    }
+
+    .k-alt,
+    .k-pivot-layout > tbody > tr:first-child > td:first-child {
+        background-color: $pivotgrid-alt-bg;
+    }
+
+    .k-fieldselector {
+        color: $pivotgrid-configurator-text;
+    }
+
+    .k-fieldselector .k-list-container {
+        background-color: $pivotgrid-container-bg;
+    }
+
+    .k-pivot-toolbar,
+    .k-pivot-table,
+    .k-fieldselector,
+    .k-fieldselector .k-list-container,
+    .k-fieldselector .k-columns > div,
+    .k-pivot-rowheaders > .k-grid td:first-child,
+    .k-pivot-table .k-grid-header .k-header.k-first {
+        border-color: $pivotgrid-chrome-border;
+    }
+
+    .k-pivot-rowheaders .k-alt .k-alt,
+    .k-header.k-alt {
+        background-color: $pivotgrid-row-headers-bg;
+    }
+
+    .k-pivot-toolbar .k-button,
+    .k-fieldselector .k-list li.k-item {
+        @include fill(
+            $button-text,
+            $button-bg,
+            $button-border,
+            $button-gradient
+        );
+
+        &:hover,
+        &.k-state-hover {
+            @include fill(
+                $button-hovered-text,
+                $button-hovered-bg,
+                $button-hovered-border,
+                $button-hovered-gradient
+            );
+        }
+
+        // Pressed state
+        &:active,
+        &.k-state-active {
+            @include fill(
+                $button-active-text,
+                $button-active-bg,
+                $button-active-border,
+                $button-active-gradient
+            );
+        }
+
+        // Focused state
+        &:focus,
+        &.k-state-focus,
+        &.k-state-focused {
+            box-shadow: $button-focused-shadow;
+        }
+
+        &.k-empty {
+            color: $subtle-text;
+        }
+    }
+
+    .k-pivot-toolbar {
+        .k-empty {
+            color: $subtle-text;
+        }
+    }
+
+    .k-pivot-layout .k-grid-footer,
+    .k-pivot-layout .k-grid.k-alt {
+        color: $pivotgrid-alt-text;
+        background-color: $pivotgrid-alt-bg;
+    }
+
+    // Loading indicator
+    .k-fieldselector {
+        .k-i-loading {
+            border-color: $header-bg;
+        }
+
+        .k-i-loading::before,
+        .k-i-loading::after {
+            background-color: $header-bg;
+        }
+    }
+
+    // KPI icons
+    .k-i-kpi-trend-increase,
+    .k-i-kpi-trend-decrease,
+    .k-i-kpi-trend-equal {
+        color: inherit;
+    }
+
+    .k-i-kpi-status-hold {
+        color: $warning;
+    }
+
+    .k-i-kpi-status-deny {
+        color: $error;
+    }
+
+    .k-i-kpi-status-open {
+        color: $success;
+    }
+}

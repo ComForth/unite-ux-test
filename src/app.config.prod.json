@@ -1,0 +1,17 @@
+{
+    "backendUrl": "/api",
+    "messagesSocket": "wss://dcs-web01.mamhu.com/api/messages/listen",
+    "opcWebsocket": "wss://dcs-web01.mamhu.com/ws",
+    "domainAuth": true,
+    "authDatabase": "waut",
+    "productionDatabase": "cdb",
+    "histServer": {
+        "server": "DCS-HIS01",
+        "certificateValidationMode": "None",
+        "username": null,
+        "pwd": null,
+        "pageSize": 0
+    },
+    "pageTitle": "Coloplast - MeS"
+    
+}
