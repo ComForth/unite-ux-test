@@ -14,7 +14,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@comforth/webapi--design": "^0.0.4",
     "@fortawesome/fontawesome-free": "^5.14.0",
     "@progress/kendo-theme-bootstrap": "^4.43.0",
     "@progress/kendo-ui": "^2021.3.1207",
